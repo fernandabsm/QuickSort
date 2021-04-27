@@ -28,12 +28,6 @@ void Quick_Sort(char* A, int p, int r)
 	if (p < r)
 	{
 		q = Partition(A, p, r);
-		printf("Particao\n");
-		for (int i = 1; i <= 12; i++)
-		{
-			printf("%c ", A[i]);
-		}
-		printf("\n");
 		Quick_Sort(A, p, q - 1);
 		Quick_Sort(A, q + 1, r);
 		
@@ -57,8 +51,4 @@ int main()
 	A[11] = 'L';
 	A[12] = 'O';
 	Quick_Sort(A, 1, 12);
-	for (int i = 1; i <= 12; i++)
-	{
-		printf("%c ", A[i]);
-	}
 }
